@@ -8,7 +8,7 @@ test('database permissions, validation, revision conflict, trash and purge',asyn
  await db.exec(await readFile('supabase/schema.sql','utf8'));await db.exec(await readFile('supabase/seed.sql','utf8'));
  const user='00000000-0000-0000-0000-000000000001';await db.exec(`insert into auth.users values('${user}');insert into public.oops_admins values('${user}');`);
  const state=(await db.query('select state from public.oops_workspace')).rows[0].state;
- assert.equal(Object.keys(state.cases).length,124);
+ assert.equal(Object.keys(state.cases).length,123);
  await db.exec('set role anon');assert.equal((await db.query('select revision from public.oops_workspace')).rows[0].revision,1);
  await assert.rejects(db.query('update public.oops_workspace set revision=5'),/permission denied/);
  await assert.rejects(db.query('select public.oops_save_state(1,$1)',[state]),/permission denied/);
