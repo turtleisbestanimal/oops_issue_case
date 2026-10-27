@@ -1,0 +1,1 @@
+export default {testDir:'tests',testMatch:'browser.spec.mjs',workers:1,use:{headless:true},webServer:{command:'python3 -m http.server 8088 --directory dist',url:'http://127.0.0.1:8088',reuseExistingServer:true},timeout:30000};
