@@ -2,7 +2,7 @@
 
 ## 구성
 
-- `public/index.html`: 전체 124건, 7가지 요소 편집, 상태 변경, 휴지통, 백업을 포함한 단일 HTML
+- `public/index.html`: 전체 123건, 7가지 요소 편집, 상태 변경, 휴지통, 백업을 포함한 단일 HTML
 - `vercel.json`: 빌드 없이 public 폴더를 서비스하는 설정
 
 ## Vercel 배포
@@ -52,3 +52,7 @@ CLI를 사용하는 경우 이 폴더에서 `npx vercel --prod`를 실행하고 
 
 - https://vercel.com/docs/builds/configure-a-build
 - https://vercel.com/docs/project-configuration/vercel-json
+ 
+## 최신 사례 반영
+
+2026-10-27 사용자 제공 HTML을 반영했습니다. 활성 123건: 보도 확인 111건, 검토 보류 12건. 휴지통 0건, 영구 삭제 기록 1건을 유지합니다.
